@@ -1,5 +1,5 @@
 #include <stdlib.h> //EXIT_SUCCESS, NULL, malloc(), free()
-#include <stdio.h> // FILE, fopen(), fscanf() 
+#include <stdio.h> // FILE, fopen(), fclose(), fscanf() 
 #include <string.h> // strcpy(), strcmp()
 
 #define max_word 64
@@ -26,16 +26,16 @@ struct element *find(char word[max_word])
 
 struct element *add()
 {
-	struct element *mem =
+	struct element *ser =
 		(struct element *) malloc(sizeof(struct element));
 	mem->next = first;
-	first = mem;
-	return mem;
+	first = ser;
+	return ser;
 }
 
 int main()
 {
-	FILE *f = fopen("ezam_bilet1/ezam_bilet1.txt", "r");
+	FILE *f = fopen("bilet1/bilet1.txt", "r");
 	while(1)
 	{
 		char temp[max_word];
