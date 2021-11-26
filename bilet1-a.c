@@ -26,11 +26,11 @@ struct element *find(char word[max_word])
 
 struct element *add()
 {
-	struct element *serg =
+	struct element *mem =
 		(struct element *) malloc(sizeof(struct element));
 	mem->next = first;
-	first = serg;
-	return serg;
+	first = mem;
+	return mem;
 }
 
 int main()
